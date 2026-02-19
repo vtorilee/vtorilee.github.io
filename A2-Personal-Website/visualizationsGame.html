@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Game Sales Visualizations</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@5.6.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-tooltip"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+  <script>
+    const options = {
+      config: {},
+      init: (view) => {
+        view.tooltip(new vegaTooltip.Handler().call);
+      },
+      view: {
+        loader: vega.loader({ baseURL: "https://cdn.jsdelivr.net/npm/vega-datasets@2/" }),
+        renderer: "canvas",
+      },
+    };
+    vl.register(vega, vegaLite, options);
+  </script>
+</head>
+
+<body>
+    <div class="titles">
+  <h6>Video Game Sales Visualizations (Assignment 3)</h6>
+    </div>
+  <h3>1. Global Sales by Genre and Platform</h3>
+  <div class="visGame">
+  <iframe width="100%" height="436" frameborder="0"
+  src="https://observablehq.com/embed/65ffc1227af11a1b@381?cells=platformGenreStackedBar"></iframe>
+  </div>
+
+  <h3>2. Sales Over Time by Platform and Genre</h3>
+  <div class="visGame">
+  <iframe width="100%" height="436" frameborder="0"
+  src="https://observablehq.com/embed/65ffc1227af11a1b@388?cells=platformGenreHeatmap"></iframe>
+  </div>
+
+  <h3>3. Regional Sales vs. Platform</h3>
+  <div class="visGame">
+  <iframe width="100%" height="436" frameborder="0"
+  src="https://observablehq.com/embed/65ffc1227af11a1b@383?cells=platformRegionStackedBar"></iframe>
+  </div>
+
+  <h3>4. Genre Popularity Across Regions</h3>
+  <div class="visGame">
+  <iframe width="100%" height="474" frameborder="0"
+  src="https://observablehq.com/embed/65ffc1227af11a1b@386?cells=genreRegionClusteredBar"></iframe>
+  </div>
+
+  <h2> Two Precise Questions/Prompts per Visualization Topic: </h2>
+  <div class="subheading">
+    <h3>Visualizations Topic #1</h3>
+    </div>
+  <h3>5a. Which Genres Generate the Highest Global Sales?</h3>
+  <div class="visGame">
+  <iframe width="100%" height="518" frameborder="0"
+  src="https://observablehq.com/embed/65ffc1227af11a1b@395?cells=GenrePopularityBar"></iframe>
+    </div>
+
+  <h3>5b. Which Genres Generate the Highest Global Sales?</h3>
+  <div class="visGame">
+  <iframe width="100%" height="574" frameborder="0"
+  src="https://observablehq.com/embed/65ffc1227af11a1b@390?cells=platformGenreTotalStackedBar"></iframe>
+  </div>
+
+  <div class="subheading">
+    <h3>Visualizations Topic #2</h3>
+    </div>
+  
+  <h3>6a. Sales Over Time by Genre</h3>
+    <div class="scroll-box">  
+  <iframe width="100%" height="399" frameborder="0"
+  src="https://observablehq.com/embed/65ffc1227af11a1b@391?cells=genreSalesOverTimeLine"></iframe>
+  </div>
+
+  <h3>6b. Average Sales vs. Sales Variability</h3>
+  <div class="visGame">
+  <iframe width="100%" height="523" frameborder="0"
+  src="https://observablehq.com/embed/65ffc1227af11a1b@392?cells=averageVariabilityScatter"></iframe>
+
+</body>
+</html>
