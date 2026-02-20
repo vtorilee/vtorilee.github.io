@@ -82,17 +82,22 @@ h6 {
 }
 
 .visGame {
-    padding-left: 100px;
     margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-left: 100px;          
 }
+
 
 .colouredText {
     color: rgb(110, 199, 199);
 }
 
-.scroll-box {
+.scroll-box { 
 padding-left: 100px;
-  width: 800px;        
+  width: 1570px;        
   overflow-x: auto;    
   overflow-y: hidden; 
   padding-bottom: 10px;  
